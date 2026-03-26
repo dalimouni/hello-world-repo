@@ -4,15 +4,17 @@ on:
 jobs: 
   hello_job:
     strategy:
+      fail-fast: false
+      max-parallel: 2
       matrix:
         os: [ubuntu-latest, windows-latest]
         images: [hello-world,alpine]
-        exclude:
-          - os: windows-latest
-            images: alpine
+        # exclude:
+        #   - os: windows-latest
+        #     images: alpine
     runs-on: ${{matrix.os}}
     steps:
-    - name: Echo text
+    - name: Echo text and run docker images
       run: |
         echo "Hello, world!"
         echo "testing the matrix"
