@@ -20,5 +20,5 @@ jobs:
       - name: testing events
         run: |
           echo "testing event activities and filters"
-          echo "skipping actions"
+          echo "skipping actions tested"
       
