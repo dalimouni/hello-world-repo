@@ -17,6 +17,7 @@ jobs:
         group: "prod server"
     steps:
     - name: test job concurrency
+      timeout-minutes: 1
       run: |
         echo "this job is in progress"
         sleep 600s
