@@ -18,5 +18,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: testing events
-        run: echo "testing event activities and filters"
+        run: |
+          echo "testing event activities and filters"
+          echo "skipping actions"
       
